@@ -233,9 +233,100 @@ while (x5 <= 100) {
 
 /* Дан массив с числами. Найдите сумму квадратов элементов этого массива. */
 
-let arrayOne = [2, 3, 4];
+let arrayOne = [2, 3, 4, 5];
 let sum = 0;
 for (let i = 0; i < arrayOne.length; i++) {
   sum += arrayOne[i] * arrayOne[i];
 }
 console.log(sum);
+
+/* ------- */
+
+/* Дан массив с числами. Найдите сумму квадратных корней элементов этого массива. */
+
+let arrayTwo = [4, 9, 16, 25, 36];
+let sumTwo = 0;
+for (let i = 0; i < arrayTwo.length; i++) {
+  sumTwo += Math.sqrt(arrayTwo[i]);
+}
+console.log(sumTwo);
+
+/* ------- */
+
+/* Дан массив с числами. Найдите сумму положительных элементов этого массива. */
+
+let arrayThree = [4, -9, 16, -25, 36];
+let arrayFour = [1, -2, 3, -4, 5];
+
+function array5(arr1) {
+  let sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] > 0) {
+      sum += arr1[i];
+    }
+  }
+  console.log(sum);
+}
+
+array5(arrayThree);
+array5(arrayFour);
+
+/* ------- */
+
+/* Дан массив с числами. Найдите сумму тех элементов этого массива, которые больше нуля и меньше десяти. */
+
+let arrayFive = [4, -9, 16, -25, 36];
+let arraySix = [1, -2, 3, -4, 5];
+function array5(arr2) {
+  let sum3 = 0;
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr2[i] > 0 && arr2[i] < 10) {
+      sum3 += arr2[i];
+    }
+  }
+  console.log(sum3);
+}
+array5(arrayFive);
+array5(arraySix);
+
+/* ------- */
+
+/* Получите массив букв этой строки. */
+
+let string2 = "abcde";
+
+function string3(arr1) {
+  let str = [];
+  Object.assign(str, arr1);
+  console.log(str);
+}
+
+string3(string2);
+
+/* ------- */
+
+/* Получите массив цифр этого числа */
+let numberForArray = 12345;
+
+function array6(arr3) {
+  let str;
+  str = arr3.toString().split("");
+  console.log(str);
+}
+
+array6(numberForArray);
+// console.log(numberForArray);
+
+/* ------- */
+
+/* Дано некоторое число. Переверните его */
+
+let numberForArray1 = 12345;
+
+function array6(arr3) {
+  let str;
+  str = arr3.toString().split("");
+  console.log(str.reverse());
+}
+
+array6(numberForArray1);
