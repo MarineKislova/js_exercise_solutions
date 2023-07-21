@@ -324,9 +324,132 @@ array6(numberForArray);
 let numberForArray1 = 12345;
 
 function array6(arr3) {
+  //   let str;
+  //   str = arr3.toString().split("");
+  //   console.log(str.reverse());
   let str;
-  str = arr3.toString().split("");
-  console.log(str.reverse());
+  str = arr3.toString().split("").reverse();
+  console.log(str);
 }
 
 array6(numberForArray1);
+
+/* ------- */
+
+/* Дано некоторое число: 12345. Найдите сумму цифр этого числа. */
+
+let numberForArray2 = 12345;
+
+function array7(arr4) {
+  let sum = 0;
+  while (arr4 > 0) {
+    sum += arr4 % 10;
+    arr4 = Math.floor(arr4 / 10);
+  }
+  console.log(sum);
+}
+
+array7(numberForArray2);
+
+/* ------- */
+
+/* Заполните массив целыми числами от 1 до 10. */
+
+let numberForArray3 = [];
+function array8(arr5) {
+  for (let i = 1; i <= 10; i++) {
+    arr5.push(i);
+  }
+  console.log(arr5);
+}
+
+array8(numberForArray3);
+
+/* ------- */
+
+/* Заполните массив четными числами из промежутка от 1 до 100. */
+
+let numberForArray4 = [];
+function array9(arr6) {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+      arr6.push(i);
+    }
+  }
+  console.log(arr6);
+}
+
+array9(numberForArray4);
+
+/* ------- */
+
+/* Дан массив с дробями:v 1.456, 2.125, 3.32, 4.1, 5.34] Округлите эти дроби до одного знака в дробной части */
+
+let numberForArray5 = [1.456, 2.125, 3.32, 4.1, 5.34];
+
+function array10(arr7) {
+  for (let i = 0; i < arr7.length; i++) {
+    arr7[i] = arr7[i].toFixed(1);
+  }
+  console.log(arr7);
+}
+
+array10(numberForArray5);
+
+/* ------- */
+
+/* Дан массив со строками. Оставьте в этом массиве только те строки, которые начинаются на http://. */
+
+let arrHttps = [
+  "https://www.google.com.ua/?hl=ru",
+  "nvdlskvnlkdnvlzknk",
+  "nvdlskvnlkdnvlzknk",
+  "https://www.youtube.com/",
+  "vmndfnbkdfnbklndfklbnd",
+  "https://www.blogger.com/",
+  "vndfkjbnkjdfnb",
+  "vkdflnblknfbklnf",
+];
+
+/* ------- */
+
+/* Дан массив со строками. Оставьте в этом массиве только те строки, которые заканчиваются на .html. */
+
+let arrHtml = [
+  "https://www.google.com.ua/?hl=ru",
+  "nvdlskvnlkdnvlzknk",
+  "nvdlskvnlkdnvlzknk",
+  "https://www.youtube.com/",
+  "vmndfnbkdfnbklndfklbnd",
+  "https://www.blogger.com/",
+  "vndfkjbnkjdfnb",
+  "vkdflnblknfbklnf",
+];
+
+/* ------- */
+
+/* Дан массив с числами. Увеличьте каждое число из массива на 10 процентов. */
+let numberForArray6 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function array11(arr8) {
+  let result;
+  for (let i = 0; i < arr8.length; i++) {
+    arr8[i] *= 1.1;
+  }
+  console.log(arr8);
+}
+
+array11(numberForArray6);
+
+/* ------- */
+
+/* Заполните массив случайными числами из промежутка от 1 до 100. */
+
+let array12 = [];
+
+for (let i = 1; i <= 100; i++) {
+  array6.push(Math.floor(Math.random() * 100));
+}
+console.log(array6);
+
+/* ------- */
