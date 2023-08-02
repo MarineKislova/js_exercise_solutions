@@ -445,11 +445,177 @@ array11(numberForArray6);
 
 /* Заполните массив случайными числами из промежутка от 1 до 100. */
 
-let array12 = [];
+// let array12 = [];
 
-for (let i = 1; i <= 100; i++) {
-  array6.push(Math.floor(Math.random() * 100));
-}
-console.log(array6);
+// for (let i = 1; i <= 100; i++) {
+//   array6.push(Math.floor(Math.random() * 100));
+// }
+// console.log(array6);
 
 /* ------- */
+
+/* Дано некоторое число: 12345
+Выведите в консоль все его символы с конца. */
+let number7 = 12345;
+
+function numberReversed(numReverse) {
+  let str;
+  str = numReverse.toString().split("").reverse();
+  console.log(str);
+}
+
+numberReversed(number7);
+
+/* ------- */
+let str;
+str = number7.toString().split("");
+for (let i = str.length; i >= 0; i--) {
+  console.log(str[i]);
+}
+
+/* ------- */
+
+/* Дан некоторый массив, например, вот такой:
+
+[1, 2, 3, 4, 5, 6]
+По очереди выведите в консоль подмассивы из двух элементов нашего массива:
+
+[1, 2]
+[3, 4]
+[5, 6] */
+
+let arraySeven = [1, 2, 3, 4, 5, 6];
+
+for (let i = 0; i < arraySeven.length; i += 2) {
+  console.log(arraySeven.slice(i, i + 2));
+}
+
+/* ------- */
+
+/* Даны два массива:
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+Слейте эти массивы в новый массив:
+[1, 2, 3, 4, 5, 6 */
+
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+
+function arrUnite(united1, united2) {
+  let united3 = united1.concat(united2);
+  console.log(united3);
+}
+
+arrUnite(arr1, arr2);
+
+/* ------- */
+
+/* Дана некоторая строка. Найдите позицию первого нуля в строке. */
+
+let strZero = "Find position of 0 in a string";
+
+for (let i = 0; i < strZero.length; i++) {
+  if (strZero[i] === "0") {
+    console.log(i);
+  }
+}
+
+/* ------- */
+
+/* Выведите в консоль все числа в промежутке от 1 до 1000, сумма первой и второй цифры которых равна пяти. */
+
+/* ------- */
+
+/* Дан массив. Удалите из него элементы с заданным значением */
+
+let arrDel = ["a", "b", "c", "d", "e"];
+
+let arrDelNew = arrDel.filter(function (del) {
+  return del !== "a" && del !== "c";
+});
+
+console.log(arrDelNew);
+
+/* ------- */
+
+/*  Дан некоторый массив, например, вот такой:
+[1, 2, 3, 4, 5, 6]
+Найдите сумму первой половины элементов этого массива. */
+
+let arrHalfSum = [1, 2, 3, 4, 5, 6];
+let halfSum = arrHalfSum.slice(0, 3);
+function arrSum(arraySum) {
+  let result = 0;
+  for (let i = 0; i < arraySum.length; i++) {
+    result += arraySum[i];
+  }
+  console.log(result);
+}
+
+arrSum(halfSum);
+
+/* ------- */
+
+/* Дан массив с числами. Подсчитайте количество отрицательных чисел в этом массиве. */
+let arrNegCount = [1, -2, 3, 4, -5, 6];
+
+function arrNeg(negCount) {
+  let negative = negCount.filter((elem) => elem < 0);
+  console.log(negative.length);
+  let possitive = negCount.filter((elem) => elem > 0);
+  console.log(possitive.length);
+}
+
+arrNeg(arrNegCount);
+
+/* ------- */
+
+/* Дан массив с числами. Оставьте в нем только положительные числа. */
+
+let arrPossitiveNum = [1, -2, 3, 4, -5, 6];
+
+function arrPossitive(possitiveNum) {
+  let negative = possitiveNum.filter((elem) => elem < 0);
+  console.log(negative);
+  let possitive = possitiveNum.filter((elem) => elem > 0);
+  console.log(possitive);
+}
+
+arrPossitive(arrPossitiveNum);
+
+/* ------- */
+
+/* Дана строка. Удалите предпоследний символ из этой строки */
+
+let strLastSymbol = "abcdef";
+
+function lastSymbol(strLastSymbol) {
+  let strOne = strLastSymbol.slice(0, -2);
+  let strTwo = strLastSymbol.slice(5);
+  console.log(strOne.concat(strTwo));
+}
+lastSymbol(strLastSymbol);
+
+/* ------- */
+
+/*  */
+
+let arrSum = [1, 2, 3, 4, 5, 6];
+
+function arrSumm(halfSumm) {
+  let halfOne = halfSumm.slice(0, 3);
+  let halfTwo = halfSumm.slice(3);
+  let one = 0;
+  let two = 0;
+  let result = 0;
+  for (let i = 0; i < halfOne.length; i++) {
+    one += halfOne[i];
+  }
+  for (let i = 0; i < halfTwo.length; i++) {
+    two += halfTwo[i];
+  }
+  result = one / two;
+  console.log(result);
+}
+
+arrSumm(arrSum);
