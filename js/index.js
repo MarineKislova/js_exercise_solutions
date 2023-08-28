@@ -598,9 +598,12 @@ lastSymbol(strLastSymbol);
 
 /* ------- */
 
-/*  */
+/* Дан некоторый массив, например, вот такой:
 
-let arrSum = [1, 2, 3, 4, 5, 6];
+[1, 2, 3, 4, 5, 6]
+Поделите сумму первой половины элементов этого массива на сумму второй половины элементов. */
+
+let arrSummm = [1, 2, 3, 4, 5, 6];
 
 function arrSumm(halfSumm) {
   let halfOne = halfSumm.slice(0, 3);
@@ -618,4 +621,202 @@ function arrSumm(halfSumm) {
   console.log(result);
 }
 
-arrSumm(arrSum);
+arrSumm(arrSummm);
+
+/* ------- */
+
+/* Даны два слова. Проверьте, что последняя буква первого слова совпадает с первой буквой второго слова. */
+
+let firstWord = "hello";
+let secondWord = "world";
+let thirdWord = "cat";
+let fourthWord = "kitkat";
+
+function firstAndLastWord(first, second) {
+  let a = first.slice(-1);
+  let b = second.slice(-1);
+  if (a === b) {
+    console.log("Ok");
+  } else {
+    console.log("error");
+  }
+}
+
+firstAndLastWord(firstWord, secondWord);
+firstAndLastWord(thirdWord, fourthWord);
+
+/* ------- */
+
+/*  Дана некоторая строка. Найдите позицию третьего нуля в строке */
+
+let strSome = "first 0, second 0, third 0";
+
+function strZero1(zero) {
+  let result;
+  result = zero.lastIndexOf("0");
+  console.log(result);
+}
+
+strZero1(strSome);
+
+/* ------- */
+
+/* Даны числа, разделенные запятыми:
+'12,34,56'
+Найдите сумму этих чисел. */
+// let strWithComa = "12,34,56";
+// let resNum;
+// for(let i=0; i<strWithComa.length; i++){
+//     resNum = Number(strWithComa[i]);
+// }
+// console.log(resNum);
+
+// function strWith(coma) {
+//   let res = [];
+//   res = coma.split(",");
+//   let num = [];
+//   console.log(res);
+//   res.forEach((element) => {
+//     num += element;
+//     console.log(num);
+//   });
+// }
+
+// strWith(strWithComa);
+
+/* ------- */
+
+/* Дана дата в следующем формате:
+
+'2025-12-31'
+Преобразуйте эту дату в следующий объект:
+
+{
+	year: '2025',
+	month: '12',
+	day: '31',
+} */
+
+let strDate = "2025-12-31";
+let objDate = {
+  year: strDate.slice(0, 4),
+  month: strDate.slice(5, 7),
+  day: strDate.slice(8),
+};
+
+// objDate.year = strDate.slice(0, 4);
+// objDate.month = strDate.slice(5, 7);
+// objDate.day = strDate.slice(8);
+
+console.log(objDate);
+
+/* ------- */
+
+/* Дана некоторая строка с буквами и цифрами. Получите позицию первой цифры в этой строке. */
+
+// let strLetNum = "ab10cde";
+// let resLetNum;
+// resLetNum = strLetNum.indexOf(typeof Number, 0);
+// console.log(resLetNum);
+// // resLetNum = strLetNum.indexOf(typeof Number, 0);
+// // console.log(resLetNum);
+
+// for (let i = 0; i < strLetNum.length; i++) {
+//   if (i === typeof Number) {
+//     resLetNum = strLetNum.indexOf(Number, 0);
+//     console.log(resLetNum);
+//   }
+// }
+
+/* ------- */
+
+/* Дан объект с ключами и значениями. Запишите в первый массив ключи объекта, а во второй - значения. */
+
+let objDateNew = {
+  name: "Marina",
+  age: 18,
+  personalId: true,
+};
+
+let valueKey = [];
+for (let key in objDateNew) {
+  valueKey.push(key);
+}
+console.log(valueKey);
+
+let valueVal = [];
+for (let key in objDateNew) {
+  valueVal.push(objDateNew[key]);
+}
+console.log(valueVal);
+
+/* ------- */
+
+/* Дано число. Выведите в консоль количество четных цифр в этом числе */
+
+// let count = 0;
+// for (let i = 0; i < num.length; i++) {
+//   if (i % 2 === 0) {
+//     count++;
+//   }
+// }
+// console.log(count);
+
+/* ------- */
+
+/* Дана некоторая строка:'abcde'
+Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:'AbCdE' */
+
+// let strLowReg = "abcde";
+
+// function strLow(lowReg) {
+//     let result = "";
+//     for (let i = 0; i < lowReg.length; i++) {
+//       if (lowReg[i] % 2 === 2) {
+//         result += lowReg[i].toUpperCase();
+//       } else {
+//         result += lowReg[i];
+//       }
+//     }
+//     console.log(result);
+// }
+
+// strLow(strLowReg);
+
+/* ------- */
+
+/* Дана некоторая строка со словами:'aaa bbb ccc'
+Сделайте заглавным первый символ каждого слова в этой строке. В нашем случае должно получится следующее:'Aaa Bbb Ccc' */
+
+// let strWords = "aaa bbb ccc";
+
+// function strWord(words) {
+//     let result = "";
+//     for (let i = 0; i < words.length; i++) {
+//       if (i === 0) {
+//         result += words[i].toUpperCase();
+//       } else {
+//         result += " " + words[i].toUpperCase();
+//       }
+//     }
+//     console.log(result);
+// }
+
+// strWord(strWords);
+
+/* ------- */
+
+/* Напишите функцию, которая вычисляет факториал. */
+
+function factorial(n) {
+  for (let i = 0; i <= n; i++) {
+    return n != 1 ? n * factorial(n - 1) : 1;
+  }
+}
+
+console.log(factorial(5));
+
+/* ------- */
+
+
+
