@@ -818,5 +818,51 @@ console.log(factorial(5));
 
 /* ------- */
 
+/* В каждой книге есть n страниц с номерами страниц от 1 до n. Написать функцию amountOfPages, аргумент которой summary составляется путем сложения количества цифр всех номеров страниц. Эта функция возвращает число - количество страниц n в книге. */
 
+function amountOfPages(summary) {
+  let result = "";
+  let n = 0;
 
+  for (let i = 1; i <= summary; i++) {
+    result += i;
+    if (result.length === summary) {
+      n = i;
+      break;
+    }
+  }
+  return n;
+}
+
+amountOfPages();
+console.log(amountOfPages(13));
+
+/* Панграмма — это предложение, в котором каждая буква алфавита встречается хотя бы по одному разу по возможности без повторений. Например, предложение «The quick brown fox jumps over the lazy dog» является панграммой, поскольку в нем хотя бы один раз используются буквы от A до Z (регистр значения не имеет).
+
+Напишите функцию isPangram, которая принимает в себя строку и возвращает логическое значение. Если строка является панграммой - вернется true, если нет - false. */
+
+function isPangram(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) > 26) {
+      return true;
+    }
+  }
+  return false;
+}
+
+isPangram(str);
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog"));
+console.log(isPangram("The"));
+
+/* Создайте функцию deepCount, которая будет считать количество всех элементов в массиве, включая и вложенные массивы. Учтите, что сам вложенный массив тоже входит в счет.  */
+
+function deepCount(a) {
+  let count = a.length;
+  for (let i = 0; i < a.length; i++)
+    if (Array.isArray(a[i])) count += deepCount(a[i]);
+  return count;
+}
+
+deepCount(a);
+console.log(deepCount([1, 2, [3, 4, [5]]]));
